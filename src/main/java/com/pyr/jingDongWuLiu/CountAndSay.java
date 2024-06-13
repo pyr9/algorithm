@@ -1,4 +1,4 @@
-package com.pyr.jingdong;
+package com.pyr.jingDongWuLiu;
 
 /**
  * 「外观数列」是一个数位字符串序列，由递归公式定义：

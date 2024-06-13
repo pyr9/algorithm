@@ -1,4 +1,4 @@
-package com.pyr.jingdong;
+package com.pyr.jingDongWuLiu;
 
 import java.util.HashMap;
 
