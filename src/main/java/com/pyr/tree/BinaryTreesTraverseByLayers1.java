@@ -9,7 +9,14 @@ import java.util.List;
 
 import static com.pyr.tree.TreeNode.createBinaryTree;
 
-public class Solution {
+/**
+ * 二叉树按层遍历
+ * <p>
+ * 递归：
+ * 相同层次的节点归入同一个数组
+ * 传入辅助的level参数决定层次
+ */
+public class BinaryTreesTraverseByLayers1 {
 
     List<List<Integer>> levels = new ArrayList<>();
 
