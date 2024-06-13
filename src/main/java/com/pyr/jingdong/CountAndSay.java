@@ -27,7 +27,7 @@ package com.pyr.jingdong;
  * <p>
  * countAndSay(4) = "21" 的行程长度编码 = "1211"
  */
-class Solution {
+class CountAndSay {
     public static String countAndSay(int n) {
         String str = "1";
 
@@ -52,3 +52,30 @@ class Solution {
         System.out.println(s);
     }
 }
+
+
+/**
+ * 详细步骤
+ * 初始化序列：
+ * <p>
+ * String str = "1";：从第 1 项开始，初始化为 "1"。
+ * 生成第 2 到第 n 项：
+ * <p>
+ * 使用 for 循环，从 2 开始，循环到 n。
+ * 在每次循环中，使用一个 StringBuilder sb 来构建当前项的描述。
+ * 用 start 和 pos 两个指针来遍历当前序列 str。
+ *   start：标记一段连续相同字符的起始位置。
+ *   pos：用于遍历当前字符串，并找到下一段不同字符的起始位置。
+ * 遍历当前序列：
+ * <p>
+ * 外层 while (pos < str.length()) 循环确保遍历整个当前序列。
+ * 内层 while (pos < str.length() && str.charAt(pos) == str.charAt(start)) 循环用于找出一段连续相同字符的长度。
+ * 找到一段连续相同字符后，sb.append(pos - start).append(str.charAt(start)); 将这段字符的长度和字符本身追加到 StringBuilder sb 中。
+ * 更新 start 到 pos 的位置，以处理下一段字符。
+ * 更新当前项：
+ * <p>
+ * str = sb.toString();：在完成一个新的序列生成后，将 sb 转换成字符串，更新为新的当前项。
+ * 返回结果：
+ * <p>
+ * 最后，返回生成的第 n 项的序列 str。
+ */
